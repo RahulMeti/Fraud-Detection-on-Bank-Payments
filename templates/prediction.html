@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="../static/images/favicon.png" type="image/x-icon">
+
+  <title>Fraud Detection on Bank Payments</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="../static/css/styles.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="../static/css/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <div class="hero_bg_box">
+      <img src="../static/images/scam5.png" alt="">
+    </div>
+
+    <header class="header_section">
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <a class="navbar-brand" href="index.html">
+              <span>
+                 Fraud on Bank Payments
+              </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""></span>
+            </button>
+
+            <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
+              <ul class="navbar-nav  ">
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('first')}}"> Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('login')}}">Logout </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('upload')}}">Upload </a>
+                </li>
+				 <li class="nav-item active">
+                  <a class="nav-link" href="{{url_for('prediction')}}">Prediction </a>
+                </li>
+				 <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('performance')}}">performance </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class=" slider_section ">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-7 col-lg-6 ml-auto">
+                  <div class="detail-box">
+                    <h1>
+                       Fraud Detection on Bank Payments using machine learning
+                      </span>
+                    </h1>
+                    <p>
+                    Preview
+                    </p>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+           
+          
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container">
+      <div class="">
+        <div class="heading_container heading_center">
+          <h2>
+         Prediction
+          </h2>
+        </div>
+        <div class="img-box col-md-7 px-0 mx-auto">
+
+
+          <center><form  action="{{ url_for('predict')}}"  method="POST"> </center>
+
+
+                <div class="span5">
+                    <div class="control-group">
+                         <div class="col-md-12 col-sm-12 col-xs-12" style="margin-left:80px;">
+                        <center><label class="control-label" for="inputMessage"><b></b></label></br></center>
+                      
+                  <div class="controls">
+			 
+                    <center><b>Age:</b>    <select   type="text"  name="age" required="required" placeholder="style" width="300" style="width: 300px"></center>
+                             <option value="0"> Less than or Equal to 18 </option>
+                         <option value="1">19-25</option>
+                        <option value="2">26-35</option>
+						<option value="3">36-45</option>
+						<option value="4">46-55,</option>
+						<option value="5">56-65</option>
+						<option value="6"> greater-than 65</option>
+                     </select>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 
+                    </div> 
+</br>
+                  <div class="controls">
+			 
+                    <center><b>Gender:</b>    <select   type="text"  name="Gender" required="required" placeholder="style" width="300" style="width: 300px"></center>
+					         <option value="0">Enterprise</option>
+                             <option value="1">Female</option>
+                         <option value="2">Male</option>
+                         <option value="3">Unknown</option>
+                     
+                        
+                     </select> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				 
+                    </div> 
+</br>
+                   
+
+                  <div class="controls">
+			 
+                    <center><b>ZipcodeOri:</b>    <select   type="text"  name="zipcodeOri" required="required" placeholder="style" width="300" style="width: 300px"></center>
+					         <option value="0">28007 - Ansonville, North Carolina, United States</option>
+                         
+                     
+                        
+                     </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+				 
+                    </div> 
+					</br>
+					
+					
+					<div class="controls">
+			 
+                    <center>&nbsp;&nbsp;&nbsp;<b>Merchant:</b>    <select   type="text"  name="merchant" required="required" placeholder="style" width="300" style="width: 300px"></center>
+					         <option value="0">M348934600</option>
+                         <option value="1">M1823072687</option>
+						 <option value="2">M50039827</option>
+						 <option value="3">M1888755466</option>
+						 <option value="4">M1053599405</option>
+						 <option value="5">M85975013</option>
+						 <option value="6">M480139044</option>
+						 <option value="7">M692898500</option>
+						 <option value="8">M348875670</option>
+						 <option value="9">M151143676</option>
+						 <option value="10">M840466850</option>
+						<option value="11">M1741626453</option>
+						 <option value="12">M1053599405</option>
+						 <option value="13">M1535107174</option>
+						 <option value="14">M855959430</option>
+						 <option value="15">M349281107</option>
+						 <option value="16">M209847108</option>
+						 <option value="17">M2122776122</option>
+						 <option value="18">M1873032707</option>
+						 <option value="19">M2011752106</option>
+						 <option value="20">M857378720</option>
+						 <option value="21">M1198415165</option>
+						 <option value="22">M1748431652</option>
+						 <option value="23">M980657600</option>
+						 <option value="24">M1352454843</option>
+						 <option value="25">M117188757</option>
+						 <option value="26">M547558035</option>
+						 <option value="27">M17379832</option>
+						 <option value="28">M1649169323</option>
+						 <option value="29">M1946091778</option>
+						 <option value="30">M97925176</option>
+						 <option value="31">M923029380</option>
+						 <option value="32">M1353266412</option>
+						 <option value="33">M1842530320</option>
+						 <option value="34">M677738360</option>
+						 <option value="35">M1313686961</option>
+						 <option value="36">M732195782</option>
+						 <option value="37">M1600850729</option>
+						 <option value="38">M1872033263</option>
+						 <option value="39">M3697346</option>
+						 <option value="40">M495352832</option>
+						 <option value="41">M1400236507</option>
+						 <option value="42">M1294758098</option>
+						 <option value="43">M1913465890</option>
+						 <option value="44">M45060432</option>
+						 <option value="45">M78078399</option>
+						 <option value="46">M2080407379</option>
+						 <option value="47">M1788569036</option>
+						 <option value="48">M1416436880</option>
+						 <option value="49">M933210764</option>
+						 <option value="50">M1726401631</option>
+                     
+                        
+                     </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+				 
+                    </div> 
+					</br>
+					
+          <div class="controls">
+			 
+                    <center><b>Category:</b>    <select   type="text"  name="category" required="required" placeholder="style" width="300" style="width: 300px"></center>
+                             <option value="0"> es_transportation</option>
+                         <option value="1">es_health</option>
+                        <option value="2">es_otherservices</option>
+						<option value="3">es_food</option>
+						<option value="4">es_hotelservices,</option>
+						<option value="5">es_barsandrestaurants</option>
+						<option value="6">es_tech</option>
+						<option value="7"> es_sportsandtoys</option>
+                         <option value="8">es_wellnessandbeauty</option>
+                        <option value="9">es_hyper</option>
+						<option value="10">es_fashion</option>
+						<option value="11">es_home,</option>
+						<option value="12">es_contents</option>
+						<option value="13">es_travel</option>
+						<option value="14">es_leisure</option>
+                     </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 
+                    </div> 
+</br>					
+                    <div class="controls">
+                     
+              <center> <b> Amount: </b> <input type="text" name="amount" placeholder="amount in $" required="required" width="300" style="width: 300px"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</center>
+                 
+                  </div>
+                   
+
+
+                </br>
+
+
+                   
+
+
+</br>
+<center>  <button type="submit" class="btn btn-primary">Predict </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</form>
+
+
+
+</br>
+</br>
+<h1> Prediction is : {{ prediction_text }} </h1>
+
+
+
+                        </div>
+                        </div>
+
+
+
+
+</div>
+
+          
+
+
+        </div>
+     
+       
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <!-- service section -->
+
+   
+
+
+
+
+  <!-- footer section -->
+  <footer class="container-fluid footer_section">
+   
+  </footer>
+  <!-- footer section -->
+
+  <script src="../static/js/jquery-3.4.1.min.js"></script>
+  <script src="../static/js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <script src="../static/js/custom.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+age,gender,zipcodeOri,merchant,category,amount,fraud
+,,,,,,
+56-65,Female,'28007','M980657600','es_sportsandtoys',626.3,1
+19-25,Male,'28007','M348934600','es_transportation',16.63,0
+26-35,Male,'28007','M1823072687','es_transportation',60.17,0
+26-35,Male,'28007','M348934600','es_transportation',54.3,0
+36-45,Female,'28007','M1823072687','es_transportation',1.28,0
+36-45,Female,'28007','M85975013','es_food',31.16,0
+19-25,Female,'28007','M1888755466','es_otherservices',257.73,1
+36-45,Male,'28007','M1888755466','es_otherservices',331.04,1
+36-45,Male,'28007','M480139044','es_health',44.26,1
+36-45,Male,'28007','M480139044','es_health',324.5,1
+19-25,Male,'28007','M1823072687','es_transportation',26.07,0

@@ -1,0 +1,7 @@
+Fraud Detection on Bank Payments Using Machine Learning.
+
+Algorithm / Model Used : Random Forest Classifier.
+
+Train Accuracy: 0.99
+Test Accuracy: 0.99.
+
