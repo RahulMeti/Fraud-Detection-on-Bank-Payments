@@ -52,7 +52,7 @@
 
             <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
               <ul class="navbar-nav  ">
-                
+
                 <li class="nav-item">
                   <a class="nav-link" href="{{url_for('first')}}"> Home</a>
                 </li>
@@ -80,19 +80,19 @@
                   <div class="detail-box">
                     <h1>
                        Fraud Detection on Bank Payments using machine learning
-<!--                      </span>-->
+                      </span>
                     </h1>
                     <p>
                     Upload
                     </p>
-                   
+
                   </div>
                 </div>
               </div>
             </div>
           </div>
-           
-        </div>
+
+
       </div>
     </section>
     <!-- end slider section -->
@@ -111,31 +111,23 @@
         <div class="img-box col-md-7 px-0 mx-auto">
 
  <div class="col-lg-4 ml-auto" style="margin-right:250px;">
-<!--          <form action="http://localhost:5000/preview" name="fs" id="fs" method="post" enctype=multipart/form-data>-->
-<!--                       <br/>-->
-<!--                       <input type="file" name="datasetfile" id="file1"  />-->
-<!--&lt;!&ndash;                        <button type="button" onclick="uploadDefaultFile()">Use Default File</button>&ndash;&gt;-->
-<!--                       <br/>-->
-<!--					   <br/>-->
-<!--					   <br/>-->
-<!--                    <input type="submit" style="margin-right:250px" class="" value="Upload">-->
-<!--                      </form>-->
-      <form action="http://localhost:5000/preview" name="fs" id="fs" method="post" enctype="multipart/form-data">
-        <br/>
-        <input type="file" name="datasetfile" id="file1" />
-        <button type="button" id="defaultFileButton">Use Default File</button>
-        <br/><br/><br/>
-        <input type="submit" style="margin-right:250px" class="" value="Upload">
-    </form>
+          <form action="http://localhost:5000/preview" name="fs" id="fs" method="post" enctype=multipart/form-data>
+                       <br/>
+                       <input type="file" name="datasetfile" id="file1" required />
+                       <br/>
+					   <br/>
+					   <br/>
+                    <input type="submit" style="margin-right:250px" class="" value="Upload">
+                      </form>
       </div>
-          
 
-          
+
+
 
 
         </div>
-     
-       
+
+
       </div>
     </div>
   </section>
@@ -144,14 +136,14 @@
 
   <!-- service section -->
 
-   
+
 
 
 
 
   <!-- footer section -->
   <footer class="container-fluid footer_section">
-   
+
   </footer>
   <!-- footer section -->
 
@@ -160,38 +152,6 @@
   <!-- owl slider -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
   </script>
-  <script>
-<!--        document.getElementById("defaultFileButton").addEventListener("click", function() {-->
-document.getElementById("defaultFileButton").addEventListener("click", function() {
-    document.getElementById("fs").submit();
-            alert("Default file selected from repository.");
-
-            // You can make an API call here to fetch a default file.
-        });
-    </script>
-  <script>
-function selectDefaultFile() {
-console.log("hi")
-    // Simulated file selection from the repository
-    const defaultFilePath = "C:\JPPY2234\SOURCE CODE\Fraud Detection on Bank Payments\upload.csv"; // Change this to your repo file path
-    const fileInput = document.getElementById("file1");
-
-    // Creating a File object dynamically is not possible for security reasons.
-    // Instead, you may need to fetch the file from the server and populate it programmatically.
-
-    alert("Default file selected: " + defaultFilePath);
-}
-</script>
-<!--  <script>function uploadDefaultFile()  const defaultFile = '../test_data/upload.csv';  // Path to the default file-->
-<!--    const fileInput = document.getElementById('file1');-->
-
-<!--    // Create a File object from the default file and set it in the input-->
-<!--    const file = new File([defaultFile], 'file.csv', {type: 'text/csv'});-->
-<!--    const dataTransfer = new DataTransfer();-->
-<!--    dataTransfer.items.add(file);-->
-<!--    fileInput.files = dataTransfer.files;  // Set the file input to the default file-->
-<!--  }-->
-<!--}</script>-->
   <script src="../static/js/custom.js"></script>
 </body>
 

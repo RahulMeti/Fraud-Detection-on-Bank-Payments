@@ -89,13 +89,46 @@ def upload():
         return redirect(url_for('login'))
     return render_template('upload.html')
 
+# @app.route('/preview', methods=["POST"])
+# def preview():
+DEFAULT_FILE_PATH = "../upload.csv"
+
 @app.route('/preview', methods=["POST"])
 def preview():
-    if request.method == 'POST':
+    if 'datasetfile' in request.files and request.files['datasetfile'].filename != '':
+        # Case 1: User uploaded a file via <input type="file">
         dataset = request.files['datasetfile']
-        df = pd.read_csv(dataset, encoding='unicode_escape')
-        df.set_index('Id', inplace=True)
-        return render_template("preview.html", df_view=df)
+        print("User uploaded file: {}".format(dataset.filename))
+    else:
+        # Case 2: User clicked "Use Default File"
+        dataset = DEFAULT_FILE_PATH
+        print("Using default file: {}".format(DEFAULT_FILE_PATH))
+
+    # Read the dataset (either uploaded or default)
+    df = pd.read_csv(dataset, encoding='unicode_escape')
+    df.set_index('Id', inplace=True)
+
+    return render_template("preview.html", df_view=df)
+
+    # if request.method == 'POST':
+    #     dataset = request.files['datasetfile']
+    #
+    #     # Ensure file exists
+    #     if dataset:
+    #         df = pd.read_csv(dataset, encoding='unicode_escape')
+    #         df.set_index('Id', inplace=True)
+    #         return render_template("preview.html", df_view=df)
+    #     else:
+    #         flash('No file uploaded or selected.', 'danger')
+    #         return redirect(url_for('upload'))
+    # if request.method == 'POST':
+    #     dataset = request.files['datasetfile']
+    #     print("check{}".format(dataset))
+    #
+    #
+    #     df = pd.read_csv(dataset, encoding='unicode_escape')
+    #     df.set_index('Id', inplace=True)
+    #     return render_template("preview.html", df_view=df)
 
 @app.route('/prediction', methods=['GET', 'POST'])
 def prediction():
