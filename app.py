@@ -91,12 +91,13 @@ def upload():
 
 # @app.route('/preview', methods=["POST"])
 # def preview():
-DEFAULT_FILE_PATH = "../upload.csv"
+DEFAULT_FILE_PATH = "upload.csv"
 
 @app.route('/preview', methods=["POST"])
 def preview():
+    print(request.files,request.files['datasetfile'])
     if 'datasetfile' in request.files and request.files['datasetfile'].filename != '':
-        # Case 1: User uploaded a file via <input type="file">
+        #         # Case 1: User uploaded a file via <input type="file">
         dataset = request.files['datasetfile']
         print("User uploaded file: {}".format(dataset.filename))
     else:
